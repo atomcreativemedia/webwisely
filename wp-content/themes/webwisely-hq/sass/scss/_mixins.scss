@@ -1,0 +1,196 @@
+@mixin e($element) {
+    &__#{$element} {
+        @content;
+    }
+}
+@mixin m($modifier) {
+    &--#{$modifier} {
+        @content;
+    }
+}
+
+@mixin radius($radius...) {
+	-webkit-border-radius: $radius;
+	   -moz-border-radius: $radius;
+	    -ms-border-radius: $radius;
+	        border-radius: $radius;
+}
+
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+       -moz-transition: $transition;
+        -ms-transition: $transition;
+         -o-transition: $transition;
+            transition: $transition;
+}
+
+@mixin transformX($transformX...) {
+    -ms-transform: translateX($transformX);
+    -webkit-transform: translateX($transformX);
+    transform: translateX($transformX);
+}
+@mixin transformY($transformY...) {
+    -ms-transform: translateY($transformY);
+    -webkit-transform: translateY($transformY);
+    transform: translateY($transformY);
+}
+
+@mixin animation_name($animation_name...) {
+    -webkit-animation-name: $animation_name;
+    -moz-animation-name: $animation_name;
+    -o-animation-name: $animation_name;
+    animation-name: $animation_name;
+}
+
+@mixin animation_duration($animation_duration...) {
+    -webkit-animation-duration: $animation_duration;
+    -moz-animation-duration: $animation_duration;
+    -ms-animation-duration: $animation_duration;
+    -o-animation-duration: $animation_duration;
+    animation-duration: $animation_duration;
+}
+
+@mixin animation_iteration_count($animation_iteration_count...) {
+    animation-iteration-count: $animation_iteration_count;
+    -moz-animation-iteration-count: $animation_iteration_count;
+    -webkit-animation-iteration-count: $animation_iteration_count;
+}
+
+@mixin pad {
+    padding: $default_spacing_sm 0;
+    @include media-breakpoint-up(md) {
+        padding: $default_spacing_md 0;
+    }
+    @include media-breakpoint-up(lg) {
+        padding: $default_spacing_lg 0;
+    }
+}
+@mixin pad-bottom {
+    padding-bottom: $default_spacing_sm;
+    @include media-breakpoint-up(md) {
+        padding-bottom: $default_spacing_md;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-bottom: $default_spacing_lg;
+    }
+}
+@mixin pad-top {
+    padding-top: $default_spacing_sm;
+    @include media-breakpoint-up(md) {
+        padding-top: $default_spacing_md;
+    }
+    @include media-breakpoint-up(lg) {
+        padding-top: $default_spacing_lg;
+    }
+}
+
+@mixin pmreset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin bg-img {
+    background-attachment: $default_background_attachment;
+	background-repeat: $default_background_repeat;
+	background-color: $default_background_color;
+	background-size: $default_background_size;
+	background-position: $default_background_position;
+}
+
+@mixin fal {
+    font-family: $fontawesome_pro;
+    font-weight: 300;
+}
+@mixin far {
+    font-family: $fontawesome_pro;
+    font-weight: 400;
+}
+@mixin fas {
+    font-family: $fontawesome_pro;
+    font-weight: 900;
+}
+@mixin fab {
+    font-family: $fontawesome_brands;
+    font-weight: 400;
+}
+
+
+@mixin full-page-mockup {
+    @include e('featured-image') {
+        position: relative;
+        z-index: 100;
+    }
+    @-webkit-keyframes scrollmockup {
+        0%, 10%, 100% { background-position: center 0%; }
+        20%, 30% { background-position: center 21%; }
+        40%, 50% { background-position: center 42%; }
+        60%, 70% { background-position: center 64%; }
+        80%, 90% { background-position: center 100%; }
+        
+        /*0%, 10%, 100% { background-position: center 0%; }
+        60%, 80% { background-position: center 100%; }*/
+    }
+    @-moz-keyframes scrollmockup {
+        0%, 10%, 100% { background-position: center 0%; }
+        20%, 30% { background-position: center 21%; }
+        40%, 50% { background-position: center 42%; }
+        60%, 70% { background-position: center 64%; }
+        80%, 90% { background-position: center 100%; }
+        
+        /*0%, 10%, 100% { background-position: center 0%; }
+        60%, 80% { background-position: center 100%; }*/
+    }
+    @-o-keyframes scrollmockup {
+        0%, 10%, 100% { background-position: center 0%; }
+        20%, 30% { background-position: center 21%; }
+        40%, 50% { background-position: center 42%; }
+        60%, 70% { background-position: center 64%; }
+        80%, 90% { background-position: center 100%; }
+        
+        /*0%, 10%, 100% { background-position: center 0%; }
+        60%, 80% { background-position: center 100%; }*/
+    }
+    @keyframes scrollmockup {
+        0%, 10%, 100% { background-position: center 0%; }
+        20%, 30% { background-position: center 21%; }
+        40%, 50% { background-position: center 42%; }
+        60%, 70% { background-position: center 64%; }
+        80%, 90% { background-position: center 100%; }
+        
+        /*0%, 10%, 100% { background-position: center 0%; }
+        60%, 80% { background-position: center 100%; }*/
+    }
+    .full-page-mockup {
+        width: 93%;
+        padding-bottom: 54%;
+        position: absolute;
+        top: 2.5%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+        background-image: url("img/full-page-mockup.jpg");
+        background-position: center 0%;
+        z-index: -1;
+                
+        @include animation_name(scrollmockup);
+        @include animation_duration(24s);
+        @include animation_iteration_count(infinite);
+        animation-timing-function: ease;
+        animation-delay: 0s;
+    }
+}
+
+
+
+%radius { @include radius($default_border_radius); }
+%transition { @include transition($default_transition); }
+%pad { @include pad; }
+%pad-bottom { @include pad-bottom; }
+%pad-top { @include pad-top; }
+%pmreset { @include pmreset; }
+%bg-img { @include bg-img; }
+
+%fal { @include fal; }
+%far { @include far; }
+%fas { @include fas; }
+%fab { @include fab; }

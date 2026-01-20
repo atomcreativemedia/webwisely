@@ -1,0 +1,47 @@
+.section-pricing {
+	@extend %pad;
+	background-color: $grey_light;
+	p,li,h1,h2,h3,h4,h5,h6 {
+		font-weight: 300;
+		strong {
+			font-weight: 700;
+		}
+	}
+	h6 {
+		&::after {
+			content: '';
+			width: 50px;
+			height: 1px;
+			background-color: $ww_pink;
+			display: block;
+			margin: 20px auto 0;
+		}
+	}
+	p {
+		padding: 0 30px;
+	}
+	@include e('content') {
+		
+	}
+	@include e('features') {
+		
+	}
+	@include e('features-list') {
+		
+	}
+	@include e('single-feature') {
+		&::before {
+			font-family: $fontawesome_pro;
+			content: "\f336";
+			margin-right: 5px;
+			color: $ww_pink;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		border-bottom: 1px dotted $ww_dark;
+		margin-bottom: 10px;
+		padding: 0px 10px 10px 25px !important;
+		position: relative;
+	}
+}

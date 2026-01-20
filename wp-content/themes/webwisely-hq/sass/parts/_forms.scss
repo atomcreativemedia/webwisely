@@ -1,0 +1,318 @@
+.form-body-profile-img {
+	width: 75px !important;
+	height: 75px !important;
+	display: block !important;
+	margin-bottom: 0px !important;
+	@include radius(150px !important);
+	
+	background-color: transparent !important;
+	&::before {
+		content: none !important;
+		position: relative !important;
+		border-left: none !important;
+		border-right: none !important;
+		border-top: none !important;
+		border-bottom: none !important;
+	}
+}
+.gform_wrapper {
+	margin: 0;
+}
+.gform_body {
+	.gform_fields { // the ul
+		margin: 0;
+		padding: 0;
+	}
+	
+	.gfield_html {
+		background-color: $ww_dark;
+		padding: 20px !important;
+		@extend %radius;
+		position: relative;
+		h4, p {
+			font-size: 14px;
+			color: $white;
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			
+			@include media-breakpoint-up(md) {
+				font-size: 22px;
+			}
+		}
+		&::before {
+			content: "";
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			border-left: 24px solid $ww_dark;
+			border-right: 16px solid transparent;
+			border-top: 20px solid transparent;
+			border-bottom: 12px solid $ww_dark;
+			left: 80px;
+			top: -30px;
+		}
+		
+		&.no-bubble {
+			background-color: transparent;
+			padding: 0 !important;
+			@include radius(0px);
+			&::before {
+				content: "";
+				width: 0px;
+				height: 0px;
+				position: absolute;
+				border-left: none;
+				border-right: none;
+				border-top: none;
+				border-bottom: none;
+				left: 0;
+				top: 0;
+			}
+		}
+		&.small-text {
+			h5 {
+				font-size: 14px;
+			}
+			p {
+				font-size: 12px;
+			}
+		}
+	}
+	.gfield { // the li
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		&.hidden_label {
+			.gfield_label {
+				display: none;
+			}
+		}
+		label {
+			font-size: 14px;
+			margin: 0 0 3px 0;
+			letter-spacing: normal;
+		}
+		.ginput_container {
+			&.ginput_complex {
+				//font-size: 0;
+				span {
+					display: inline-block;
+					margin: 0 2%;
+					width: 46% !important;
+					&:first-child {
+						margin-left: 0;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+		input,textarea {
+			margin: 0 !important;
+			font-size: 14px !important;
+			@extend %radius;
+			border: none !important;
+		}
+		input[type="text"],textarea {
+			width: 100% !important;
+			padding: 10px 15px !important;
+		}
+		.ginput_complex {
+			span {
+				margin: 0 0 20px 0 !important;
+				&:last-child {
+					margin-bottom: 0 !important;
+				}
+			}
+		}
+		.gfield_radio, .gfield_checkbox {
+			font-size: 0;
+			.gchoice {
+				display: inline-flex;
+				align-items: center;
+				// text-align: center;
+				margin-bottom: 20px;
+				margin-right: 20px;
+				// margin-right: 100px;
+				vertical-align: top;
+				@extend %radius;
+				background-color: $white;
+				cursor: pointer;
+				@extend %transition;
+				
+				@include media-breakpoint-up(md) {
+					// display: inline-flex;
+				}
+				
+				input, label {
+					display: inline-block;
+					cursor: pointer;
+				}
+				label {
+					font-weight: 700;
+					margin-top: 0;
+					padding: 0 20px;
+					font-size: 14px;
+					text-align: left;
+					// width: 70%;
+					@include media-breakpoint-up(md) {
+						font-size: 18px;
+						width: auto;
+						padding: 10px 20px;
+					}
+				}
+				input {
+					-webkit-appearance: none;
+					   -moz-appearance: none;
+					        appearance: none;
+					background-color: $ww_dark;
+					width: 40px;
+					height: 40px;
+					padding: 0;
+					position: relative;
+					margin: 0 !important;
+					
+					&::after {
+						content: "\f00c";
+						font-family: $fontawesome_pro;
+						position: absolute;
+						top: 50%;
+						left: 0;
+						width: 100%;
+						text-align: center;
+						transform: translateY(-45%);
+						color: $white;
+						opacity: 0.2;
+						font-size: 26px;
+						font-weight: 700;
+						@extend %transition;
+					}
+					&:hover::after {
+						opacity: 0.3;
+						color: $ww_yellow;
+					}
+					&:checked::after {
+						opacity: 1;
+						color: $ww_yellow;
+					}
+					
+					@include media-breakpoint-up(md) {
+						width: 80px;
+						height: 80px;
+						&::after {
+							font-size: 34px;
+						}
+					}
+				}
+				&:hover {
+					background-color: $grey_light;
+				}
+			}
+		}
+	}
+}
+.gform_page_footer {
+	input[type="button"] {
+		padding: $default_button_padding;
+		background-color: $black;
+		border: none;
+		@include radius(3px);
+		@extend %transition;
+		color: $grey_light;
+		font-family: $featured_font;
+		font-weight: 700;
+		width: auto !important;
+		&:hover {
+			background-color: $black;
+			border-color: $black;
+			color: $grey_light;
+		}
+		
+		&.gform_next_button {
+			background-color: $grey_light;
+			border: 2px solid $grey_light;
+			color: $ww_dark;
+			@extend %transition;
+			float: right;
+			&:hover {
+				background-color: $ww_yellow;
+				border-color: $ww_yellow;
+				color: $ww_dark;
+			}
+		}
+		&.gform_previous_button {
+			background-color: transparent;
+			border: 2px solid $grey_light;
+			color: $grey_light;
+			@extend %transition;
+			float: left;
+			&:hover {
+				background-color: $grey_light;
+				color: $ww_dark;
+			}
+		}
+	}
+	input[type="submit"] {
+		padding: $default_button_padding;
+		background-color: $ww_yellow;
+		border: 2px solid $ww_yellow;
+		@include radius(3px);
+		@extend %transition;
+		color: $ww_dark;
+		font-family: $featured_font;
+		font-weight: 700;
+		width: auto !important;
+		float: right;
+		&:hover {
+			background-color: $ww_yellow_hover;
+			border-color: $ww_yellow_hover;
+			color: $ww_dark;
+		}
+	}
+}
+
+.post-password-form {
+	label {
+		font-weight: 700;
+		width: 100%;
+		margin-bottom: $default_spacing_xs;
+		input {
+			margin-top: 5px;
+			border: 1px solid $grey_light;
+			width: 100%;
+			padding: 10px 15px;
+			@include radius(4px);
+			-moz-box-shadow: 1px 1px 3px rgba($grey_dark, 0.3);
+			-webkit-box-shadow: 1px 1px 3px rgba($grey_dark, 0.3);
+			box-shadow: 1px 1px 3px rgba($grey_dark, 0.3);
+		}
+	}
+	input[type="submit"] {
+		font-weight: 700;
+		@include radius(3px);
+		@extend %transition;
+		@extend %default_solid;
+		border: none;
+		background-color: $ww_yellow;
+		color: $grey_light;
+		padding: $default_button_padding;
+		&:hover {
+			background-color: $ww_yellow_hover;
+		}
+	}
+}
+
+.gf_progressbar_wrapper {
+	border-top: 1px solid $white;
+	border-bottom: 1px solid $white;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+	padding-top: 20px;
+	margin-top: 40px;
+}
+.gf_progressbar_title {
+	color: $white !important;
+}

@@ -1,0 +1,80 @@
+.section-hero {
+	background-color: $ww_pink;
+	p,li,h1,h2,h3,h4,h5,h6 {
+		font-weight: 300;
+		color: $white;
+		strong {
+			font-weight: 700;
+			color: $ww_yellow;
+		}
+	}
+	a {
+		color: $ww_yellow;
+		text-decoration: none;
+		font-weight: 700;
+		&:hover {
+			text-decoration: underline;
+			color: $ww_yellow;
+		}
+	}
+	
+	@include media-breakpoint-up(md) {
+		background-position: center center;
+	}
+	
+	@include e('overlay') {
+		padding: 130px 0 50px;
+		@include media-breakpoint-up(lg) {
+			padding: 180px 0 80px;
+		}
+	}
+	@include e('heading') {
+		@include media-breakpoint-up(md) {
+			font-size: 52px;
+		}
+	}
+	@include e('subheading') {
+		@include media-breakpoint-up(md) {
+			font-size: 28px;
+		}
+	}
+	@include e('list') {
+		margin: 30px 0;
+	}
+	@include e('list-item') {
+		list-style-type: none;
+		font-size: 16px;
+		margin-bottom: 10px;
+		padding-left: 5px;
+		
+		strong {
+			color: $ww_yellow !important;
+		}
+		@include media-breakpoint-up(sm) {
+			font-size: 18px;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: 22px;
+		}
+		@include media-breakpoint-up(lg) {
+			font-size: 18px;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 22px;
+		}
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+		i {
+			color: $ww_yellow;
+			font-size: 20px;
+		}
+	}
+	@include e('pre-cta') {
+		font-size: 14px;
+		margin-bottom: 3px;
+	}
+	
+	@include full-page-mockup;
+}

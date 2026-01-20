@@ -1,0 +1,23 @@
+.section-thank-you {
+	@extend %pad;
+	h2 {
+		margin-bottom: 10px;
+		&::after {
+			content: '';
+			width: 50px;
+			height: 1px;
+			background-color: $blue;
+			display: block;
+			margin-top: 10px;
+		}
+	}
+	h6 {
+		margin-bottom: $default_spacing_sm;
+	}
+	p {
+		padding: 0 30px;
+	}
+	@include e('article') {
+		position: relative;
+	}
+}

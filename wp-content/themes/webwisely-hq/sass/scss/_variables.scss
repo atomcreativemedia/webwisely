@@ -1,0 +1,80 @@
+$white:				#FFFFFF;
+$black:				#000000;
+
+$grey_light:		#f7f7f7;
+$grey_med:			#9B9B9B;
+$grey_dark:			#2c2926;
+
+$ww_dark:			#0D1D2C;
+
+$ww_yellow:			#FFD100;
+$ww_pink:			#E51147;
+	$ww_yellow_hover:	darken($ww_yellow,10%);
+	$ww_pink_hover:	darken($ww_pink,10%);
+
+$blue:				#243646;
+$green:				#00ACA5;
+	$blue_hover:	darken($blue,10%);
+	$green_hover:	darken($green,10%);
+	
+$purple:			#780890;
+	$purple_hover:	darken($purple,10%);
+
+$default_spacing_xs:	30px;
+$default_spacing_sm:	50px;
+$default_spacing_md:	70px;
+$default_spacing_lg:	90px;
+
+$default_border_radius:	5px;
+
+$default_transition:	all .25s ease;
+
+$default_background_attachment:	scroll;
+$default_background_repeat:		no-repeat;
+$default_background_color:		transparent;
+$default_background_size:		cover;
+$default_background_position:	center center;
+
+$default_button_padding: 15px 30px;
+
+$default_font:	"Lexend", sans-serif;
+$featured_font:	"Lexend", sans-serif;
+	// 400 regular
+	// 500 medium
+	// 600 semi-bold
+	// 700 bold
+
+$fontawesome_pro: 'Font Awesome 6 Pro';
+$fontawesome_brands: 'Font Awesome 6 Brands';
+$fontawesome_duo: 'Font Awesome 6 Duotone';
+
+$default_font_style:	normal;
+$default_font_variant:	normal;
+$default_font_weight:	500;
+$default_font_size:		16px;
+$default_font_family:	$default_font;
+$font_stack:
+	$default_font_style
+	$default_font_variant
+	$default_font_weight
+	$default_font_size
+	$default_font_family;
+
+$h1_sm: 28px;	$h1_md: 32px;	$h1_lg: 32px;
+$h2_sm: 26px;	$h2_md: 30px;	$h2_lg: 30px;
+$h3_sm: 24px;	$h3_md: 28px;	$h3_lg: 28px;
+$h4_sm: 22px;	$h4_md: 26px;	$h4_lg: 26px;
+$h5_sm: 20px;	$h5_md: 24px;	$h5_lg: 24px;
+$h6_sm: 18px;	$h6_md: 22px;	$h6_lg: 22px;
+
+$heading_font_style:	normal;
+$heading_font_variant:	normal;
+$heading_font_weight:	600;
+$heading_font_size:		$h1_sm;
+$heading_font_family:	$featured_font;
+$heading_font_stack:
+	$heading_font_style
+	$heading_font_variant
+	$heading_font_weight
+	$heading_font_size
+	$heading_font_family;

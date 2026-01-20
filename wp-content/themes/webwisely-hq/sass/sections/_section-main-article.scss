@@ -1,0 +1,21 @@
+.section-main-article {
+	@extend %pad;
+	background-color: $grey_light;
+	@include full-page-mockup;
+	
+	p,li,h1,h2,h3,h4,h5,h6 {
+		font-weight: 300;
+		strong {
+			font-weight: 700;
+		}
+	}
+	
+	@include e('promotional-image') {
+		img {
+			@include radius(25px);
+			@include media-breakpoint-up(xl) {
+				@include radius(65px);
+			}
+		}
+	}
+}

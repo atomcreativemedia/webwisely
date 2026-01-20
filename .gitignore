@@ -1,0 +1,59 @@
+# ------------------------------
+# WordPress project (track only custom themes + plugins)
+# ------------------------------
+
+# --- Core WordPress ---
+/wp-admin/
+/wp-includes/
+/index.php
+/wp-*.php
+/xmlrpc.php
+/license.txt
+/readme.html
+/.htaccess
+/wp-config.php
+
+# --- Ignore everything in wp-content by default ---
+/wp-content/*
+
+# --- Allow themes and plugins (your actual code) ---
+!/wp-content/themes/
+!/wp-content/themes/**
+!/wp-content/plugins/
+!/wp-content/plugins/**
+!/wp-content/uploads/
+!/wp-content/uploads/**
+
+# --- Common WP stuff to always ignore ---
+# /wp-content/uploads/
+# /wp-content/plugins/
+/wp-content/cache/
+/wp-content/upgrade/
+/wp-content/backups*/
+/wp-content/ai1wm-backups/
+/wp-content/wflogs/
+/wp-content/languages/
+/wp-content/debug.log
+
+# Optional - ignore default example themes/plugins if present
+/wp-content/themes/twenty*/
+/wp-content/plugins/hello.php
+
+# --- Database dumps (kept out of repo) ---
+/db/
+/*.sql
+
+# --- Logs ---
+*.log
+
+# --- Node / build junk (if applicable) ---
+node_modules/
+dist/
+build/
+
+# --- OS / editor junk ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.well-known/

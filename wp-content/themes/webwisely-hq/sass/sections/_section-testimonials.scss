@@ -1,0 +1,40 @@
+.section-testimonials {
+	@extend %pad;
+	background-color: $ww_dark;
+	p,li,h1,h2,h3,h4,h5,h6 {
+		font-weight: 300;
+		color: $white;
+		strong {
+			font-weight: 700;
+		}
+	}
+	hr {
+		border-color: $white;
+	}
+	p {
+		padding: 0 30px;
+	}
+	@include e('quote') {
+		color: $ww_yellow;
+		font-size: 110px;
+		@include media-breakpoint-up(lg) {
+			font-size: 130px;
+		}
+	}
+	@include e('testimonials') {
+		
+	}
+	@include e('testimonial') {
+		font-weight: 700;
+		color: $ww_pink;
+		font-size: 26px;
+		padding-left: 50px;
+		font-style: italic;
+		@include media-breakpoint-up(lg) {
+			font-size: 36px;
+		}
+		@include media-breakpoint-up(xl) {
+			font-size: 46px;
+		}
+	}
+}

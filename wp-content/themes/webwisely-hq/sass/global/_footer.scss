@@ -1,0 +1,97 @@
+.footer {
+	@extend %pad;
+	background-color: $ww_dark;
+	color: $white;
+	font-size: 14px;
+	
+	p,li,h1,h2,h3,h4,h5,h6 { color: $white; }
+	p { font-size: 14px; }
+	
+	@include e('item') {
+		margin-bottom: $default_spacing_sm;
+		display: block;
+		@include m('end') {
+			margin-bottom: 0;
+		}
+		@include m('s2') {
+			@include media-breakpoint-up(md) {
+				margin-bottom: 0;
+				margin-top: $default_spacing_xs;
+			}
+		}
+	}
+	
+	@include e('logo-container') {
+		font-size: 18px;
+		font-weight: 700;
+		a {
+			color: $white;
+			@extend %transition;
+			&:hover {
+				color: $green;
+				text-decoration: none;
+			}
+		}
+	}
+	@include e('social-media-links') {
+		@extend %pmreset;
+	}
+	@include e('social-media-link') {
+		@extend %pmreset;
+		list-style-type: none;
+		display: inline-block;
+		margin-right: 10px;
+		font-size: 34px;
+		a {
+			color: $white;
+			@extend %transition;
+			&:hover {
+				color: $green;
+				text-decoration: none;
+			}
+		}
+	}
+	@include e('terms-menu') {
+		ul {
+			@extend %pmreset;
+			margin-bottom: 20px;
+			li {
+				@extend %pmreset;
+				list-style-type: none;
+				display: inline-block;
+				margin-right: 10px;
+				a {
+					color: $white;
+					@extend %transition;
+					&:hover {
+						color: $green;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	@include e('credit') {
+		p {
+			font-size: 12px;
+			margin-bottom: 3px;
+			a {
+				font-weight: 700;
+				color: $white;
+				text-decoration: none;
+				@extend %transition;
+				&:hover {
+					color: $green;
+				}
+			}
+		}
+		.credit-logo {
+		    max-width: 60px;
+		    height: auto;
+		    display: block;
+		    @include media-breakpoint-up(md) {
+		    	margin: 0 0 0 auto;
+		    }
+		}
+	}
+}

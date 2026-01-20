@@ -1,0 +1,61 @@
+.header {
+	padding: 25px 0;
+	background-color: $ww_dark;
+	color: $white;
+	position: fixed;
+	width: 100%;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: 200;
+	@extend %transition;
+    &.scrolled {
+        background-color: rgba($ww_dark,0.95);
+    }
+	
+	@include e('logo-container') {
+		font-size: 18px;
+		font-weight: 700;
+		a {
+			color: $white;
+			@extend %transition;
+			&:hover {
+				color: $ww_pink;
+				text-decoration: none;
+			}
+		}
+		
+		@include media-breakpoint-up(md) {
+			font-size: 24px;
+		}
+	}
+	
+	@include e('form-click') {
+		//font-size: 24px;
+		i {
+			cursor: pointer;
+			color: $white;
+			@extend %transition;
+			&:hover {
+				color: $ww_pink;
+				text-decoration: none;
+			}
+		}
+	}
+	
+	@include e('pricing') {
+		margin-bottom: 0;
+		
+		@include media-breakpoint-up(md) {
+			margin-top: 0;
+			margin-right: 20px;
+		}
+		
+		a {
+			color: $white;
+			&:hover {
+				color: $ww_pink;
+			}
+		}
+	}
+}
