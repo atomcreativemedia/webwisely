@@ -8,15 +8,14 @@
 	<?php if ( is_singular() && get_option( 'thread_comments' ) ) wp_enqueue_script( 'comment-reply' ); ?>
 	<?php wp_head(); ?>
 	<style>
-		.form-body-profile-img.img-1 {
+		/*.form-body-profile-img.img-1 {
 			background-image: url(<?php the_field('form_profile_image','option'); ?>);
-		}
+		}*/
 	</style>
 </head>
 
 <body>
 	
-	<?php get_template_part('template-parts/form-drawer'); ?>
 	
 	<header class="header">
 		<div class="container">

@@ -38,7 +38,9 @@
 								<div class="row justify-content-center">
 									<div class="col-md-6">
 										<div class="the-form">
-											<!-- <div class="form-body-profile-img bg-img" style="background-image:url(<?php the_field('form_profile_image','option'); ?>);"></div> -->
+											<div class="form-body-profile-img">
+												
+											</div>
 											<?php if(get_field('enquiry_form','option')) {
 												$form = get_field('enquiry_form','option');
 												gravity_form($form['id'], false, false, true, '', true);

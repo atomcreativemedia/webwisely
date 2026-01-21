@@ -112,6 +112,56 @@
 		<?php endif; ?>
 		
 		
+		
+		
+		
+		<?php if(get_field('display_how_it_works_section')) :
+		if(get_field('how_it_works_section_id')) {
+		    $how_it_works_section_id = get_field('how_it_works_section_id');
+		} else {
+		    $how_it_works_section_id = 'usps-section';
+		} ?>
+		<section class="section-how-it-works" id="<?php echo($how_it_works_section_id); ?>">
+			<div class="container">
+				<?php if(get_field('how_it_works_section_introduction')) : ?>
+				<div class="row">
+					<div class="col">
+						<div class="section-how-it-works__content">
+							<?php the_field('how_it_works_section_introduction'); ?>
+						</div>
+					</div>
+				</div>
+				<?php endif; ?>
+				
+				<?php if( have_rows('how_it_works_section_steps') ) : ?>
+				<div class="row">
+					<?php while( have_rows('how_it_works_section_steps') ) : the_row(); ?>
+					<div class="col-11 col-sm-10 col-md-8 col-lg-3">
+						<div class="section-how-it-works__step">
+							<div class="section-how-it-works__step-number">
+								<?php echo get_row_index(); ?>.
+							</div>
+							<div class="section-how-it-works__step-content">
+								<?php the_sub_field('step_content'); ?>
+							</div>
+						</div>
+					</div>
+					<?php endwhile; ?>
+				</div>
+				<?php endif; ?>
+				
+				<div class="row">
+					<div class="col">
+						<p class="button solid yellow"><a class="form-click">Start Here</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<?php endif; ?>
+		
+		
+		
+		
 		<?php if(get_field('display_pricing_section')) :
 		if(get_field('pricing_section_id')) {
 		    $pricing_section_id = get_field('pricing_section_id');

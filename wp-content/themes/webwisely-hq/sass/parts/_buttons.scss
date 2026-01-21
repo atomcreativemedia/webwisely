@@ -19,6 +19,8 @@ p.button {
 	position: relative;
 	@include radius(8px);
 	
+	padding: 0 !important;
+	
 	a {
 		text-decoration: none;
 		padding: $default_button_padding;
@@ -47,6 +49,7 @@ p.button {
 			}
 		}
 		&.pink {
+			background-color: $ww_pink_hover;
 			a {
 				background-color: $ww_pink;
 				border-color: $ww_pink;

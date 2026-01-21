@@ -53,6 +53,8 @@
 			</div>
 		</div>
 	</footer>
+	<?php get_template_part('template-parts/form-drawer'); ?>
+	
     <?php wp_footer(); ?>
 </body>
 </html>

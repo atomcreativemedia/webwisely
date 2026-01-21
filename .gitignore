@@ -13,6 +13,10 @@
 /.htaccess
 /wp-config.php
 
+# --- Other Stuff ---
+/assets
+/googlebc2041e78582c85d.html
+
 # --- Ignore everything in wp-content by default ---
 /wp-content/*
 
@@ -25,8 +29,6 @@
 !/wp-content/uploads/**
 
 # --- Common WP stuff to always ignore ---
-# /wp-content/uploads/
-# /wp-content/plugins/
 /wp-content/cache/
 /wp-content/upgrade/
 /wp-content/backups*/

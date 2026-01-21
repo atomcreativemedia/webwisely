@@ -1,0 +1,33 @@
+.section-how-it-works {
+	@extend %pad;
+	background-color: $ww_pink;
+	p,li,h1,h2,h3,h4,h5,h6 {
+		font-weight: 300;
+		color: $white;
+		strong {
+			font-weight: 700;
+			color: $ww_yellow;
+		}
+	}
+	p {
+		padding: 0 30px;
+	}
+	@include e('step') {
+		margin-top: $default_spacing_xs;
+		margin-bottom: $default_spacing_xs;
+		&:nth-child(even) {
+			.section-usps__usp-icon {
+				border: 2px solid $ww_yellow;
+				background-color: $ww_yellow;
+				
+			}
+		}
+	}
+	@include e('step-number') {
+		color: $ww_yellow;
+		font-weight: 700;
+	}
+	@include e('step-content') {
+		color: $white;
+	}
+}
