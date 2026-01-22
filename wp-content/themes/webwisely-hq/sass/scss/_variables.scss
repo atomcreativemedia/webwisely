@@ -9,16 +9,10 @@ $ww_dark:			#0D1D2C;
 
 $ww_yellow:			#FFD100;
 $ww_pink:			#E51147;
+$ww_green:			#00ACA5;
 	$ww_yellow_hover:	darken($ww_yellow,10%);
-	$ww_pink_hover:	darken($ww_pink,10%);
-
-$blue:				#243646;
-$green:				#00ACA5;
-	$blue_hover:	darken($blue,10%);
-	$green_hover:	darken($green,10%);
-	
-$purple:			#780890;
-	$purple_hover:	darken($purple,10%);
+	$ww_pink_hover:		darken($ww_pink,10%);
+	$ww_green_hover:	darken($ww_green,10%);
 
 $default_spacing_xs:	30px;
 $default_spacing_sm:	50px;
@@ -44,9 +38,10 @@ $featured_font:	"Lexend", sans-serif;
 	// 600 semi-bold
 	// 700 bold
 
-$fontawesome_pro: 'Font Awesome 6 Pro';
-$fontawesome_brands: 'Font Awesome 6 Brands';
-$fontawesome_duo: 'Font Awesome 6 Duotone';
+$fontawesome_pro: 'Font Awesome 7 Pro';
+$fontawesome_slab: 'Font Awesome 7 Slab';
+$fontawesome_brands: 'Font Awesome 7 Brands';
+$fontawesome_duo: 'Font Awesome 7 Duotone';
 
 $default_font_style:	normal;
 $default_font_variant:	normal;

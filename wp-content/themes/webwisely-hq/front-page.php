@@ -9,14 +9,14 @@
 		<section class="section-hero bg-img" style="background-image:url(<?php the_field('background_image'); ?>);" id="<?php echo($hero_section_id); ?>">
 			<div class="section-hero__overlay">
 				<div class="container">
-					<div class="row justify-content-center align-items-center gy-5">
-						<div class="col-8 col-lg-6">
+					<div class="row justify-content-center align-items-center align-items-lg-start gy-5">
+						<div class="col-8 col-lg-6 col-xl-5 order-lg-1 sticky-lg-this">
 							<div class="section-hero__featured-image">
 								<img src="<?php the_field('featured_image'); ?>" alt="" class="img-fluid">
 								<div class="full-page-mockup bg-img"></div>
 							</div>
 						</div>
-						<div class="col-11 col-lg-6">
+						<div class="col-11 col-lg-6 col-xl-7 order-lg-0">
 							<div class="section-hero__content">
 								<h1 class="section-hero__heading"><?php the_field('hero_heading'); ?></h1>
 								<h6 class="section-hero__subheading"><?php the_field('hero_subheading'); ?></h6>
@@ -27,7 +27,7 @@
 									<?php endwhile; ?>
 								</ul>
 								<?php endif; ?>
-								<p class="button bigbutton solid yellow "><a class="form-click">Start My Website <i class="fa-sharp fa-solid fa-arrow-up-right"></i></a></p>
+								<p class="button bigbutton solid yellow "><a class="form-click">Start My Website <i class="fa-slab fa-regular fa-arrow-right fa-beat"></i></a></p>
 							</div>
 						</div>
 					</div>
@@ -44,20 +44,13 @@
 		<section class="section-main-article" id="<?php echo($main_article_section_id); ?>">
 			<div class="container">
 				<div class="row justify-content-center">
-					<div class="col-10 col-lg-6 col-xl-5 mb-3 mb-lg-0">
+					<div class="col-10 col-md-10 col-lg-6 col-xl-5 mb-3 mb-lg-0">
 						<div class="section-main-article__content">
 							<?php the_content(); ?>
 							<p class="button solid pink d-none d-lg-inline-block"><a class="form-click">Get Started!</a></p>
 						</div>
 					</div>
-					<div class="col-9 col-md-8 col-lg-6 d-block d-lg-none">
-						<div class="section-main-article__featured-image">
-							<img src="<?php the_field('featured_image'); ?>" alt="" class="img-fluid">
-							<div class="full-page-mockup bg-img"></div>
-							<p class="button bigbutton solid pink"><a class="form-click">Get Started!</a></p>
-						</div>
-					</div>
-					<div class="col-lg-6 col-xl-7 d-none d-lg-block">
+					<div class="col-md-10 col-lg-6 col-xl-7">
 						<div class="section-main-article__promotional-image">
 							<img src="<?php the_field('promotional_image'); ?>" alt="" class="img-fluid">
 						</div>
@@ -66,8 +59,6 @@
 			</div>
 		</section>
 		<?php endif; ?>
-		
-		<section class="section-promotional-image bg-img d-lg-none" style="background-image:url('<?php the_field('promotional_image'); ?>');"></section>
 		
 		<?php if(get_field('display_usps_section')) :
 		if(get_field('usps_section_id')) {
@@ -112,9 +103,6 @@
 		<?php endif; ?>
 		
 		
-		
-		
-		
 		<?php if(get_field('display_how_it_works_section')) :
 		if(get_field('how_it_works_section_id')) {
 		    $how_it_works_section_id = get_field('how_it_works_section_id');
@@ -125,7 +113,7 @@
 			<div class="container">
 				<?php if(get_field('how_it_works_section_introduction')) : ?>
 				<div class="row">
-					<div class="col">
+					<div class="col text-center">
 						<div class="section-how-it-works__content">
 							<?php the_field('how_it_works_section_introduction'); ?>
 						</div>
@@ -134,15 +122,21 @@
 				<?php endif; ?>
 				
 				<?php if( have_rows('how_it_works_section_steps') ) : ?>
-				<div class="row">
+				<div class="row justify-content-center gy-5 gx-md-5">
 					<?php while( have_rows('how_it_works_section_steps') ) : the_row(); ?>
-					<div class="col-11 col-sm-10 col-md-8 col-lg-3">
+					<div class="col-10 col-sm-10 col-md-6 col-lg-5 col-xxl-3">
 						<div class="section-how-it-works__step">
 							<div class="section-how-it-works__step-number">
-								<?php echo get_row_index(); ?>.
+								<span><?php echo get_row_index(); ?></span>
 							</div>
 							<div class="section-how-it-works__step-content">
-								<?php the_sub_field('step_content'); ?>
+								<div class="section-how-it-works__step-content-heading">
+									<h3><?php the_sub_field('step_heading'); ?></h3>
+									<?php the_sub_field('step_icon'); ?>
+								</div>
+								<div class="section-how-it-works__step-content-text">
+									<p><?php the_sub_field('step_content'); ?></p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -151,7 +145,7 @@
 				<?php endif; ?>
 				
 				<div class="row">
-					<div class="col">
+					<div class="col pt-5 text-center">
 						<p class="button solid yellow"><a class="form-click">Start Here</a></p>
 					</div>
 				</div>
@@ -210,7 +204,7 @@
 					</div>
 					<div class="col-10 col-lg-8 col-xl-10">
 						<div class="section-testimonials__quote">
-							<i class="fa-sharp fa-solid fa-quote-left"></i>
+							<i class="fa-slab fa-quote-left"></i>
 						</div>
 						<?php if( have_rows('testimonials') ) : ?>
 						<div class="section-testimonials__testimonials testimonials-slider">

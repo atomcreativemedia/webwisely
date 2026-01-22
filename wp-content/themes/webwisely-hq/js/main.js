@@ -1,6 +1,16 @@
 // JavaScript Document
 
 $(document).ready(function() {
+	
+	/***********************************
+	** Getting around iOS's Safari UI elements
+	***********************************/
+	function setDrawerHeight() {
+	  const vh = window.innerHeight * 0.01;
+	  document.documentElement.style.setProperty('--vh', `${vh}px`);
+	}
+	setDrawerHeight();
+	window.addEventListener('resize', setDrawerHeight);
     
 	
 	/***********************************
@@ -10,6 +20,17 @@ $(document).ready(function() {
 	var form = $("#form-container");
 	form_click.on("click", function() {
 		form.toggleClass("open");
+	});
+	
+	
+	/***********************************
+	** Menu Drawer Control
+	***********************************/
+	var menu_click = $(".menu-click");
+	var menu_drawer = $(".menu-drawer__layer-1");
+	menu_click.on("click", function() {
+		menu_drawer.toggleClass("open");
+		$("body").toggleClass("static");
 	});
 	
 	

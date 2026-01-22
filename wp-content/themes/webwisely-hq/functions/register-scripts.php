@@ -18,9 +18,26 @@ function scripts_and_styles() {
     // Scripts
     wp_deregister_script( 'jquery' );
     wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-2.2.4.min.js', array(), '2.2.4', false );
-    wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/a036d0101c.js',array(),null, false );
+    wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/2c84dcacaf.js',array(),null, false );
     wp_enqueue_script( 'slickslider', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), '1.8.1', true );
     wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js', array('jquery'), '5.0.2', true );
     wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array('jquery'), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'scripts_and_styles' ); // action hook to actually load the script/s
+
+
+/*
+USPs
+Quick, Easy & Fuss-Free - magic wand sparkles
+No HTML or Design Knowledge Required - code
+Fully Responsive - mobile
+Brandable & Customisable - palette
+Built-In Video Tutorials - film
+Dedicated, 1-2-1 Support - umbrella
+
+STEPS
+Start Your Website - paper plane
+Add Your Content - lightbulb
+Get Real Support - heart
+Publish and Grow - flower
+*/

@@ -1,5 +1,5 @@
 .form-body-profile-img {
-	width: 75px !important;
+	/*width: 75px !important;
 	height: 75px !important;
 	display: block !important;
 	margin-bottom: 0px !important;
@@ -13,8 +13,18 @@
 		border-right: none !important;
 		border-top: none !important;
 		border-bottom: none !important;
+	}*/
+	i {
+		font-size: 120px;
 	}
 }
+
+.the-form {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
 .gform_wrapper {
 	margin: 0;
 }
@@ -285,9 +295,9 @@
 			width: 100%;
 			padding: 10px 15px;
 			@include radius(4px);
-			-moz-box-shadow: 1px 1px 3px rgba($grey_dark, 0.3);
-			-webkit-box-shadow: 1px 1px 3px rgba($grey_dark, 0.3);
-			box-shadow: 1px 1px 3px rgba($grey_dark, 0.3);
+			-moz-box-shadow: 1px 1px 3px rgba($ww_dark, 0.3);
+			-webkit-box-shadow: 1px 1px 3px rgba($ww_dark, 0.3);
+			box-shadow: 1px 1px 3px rgba($ww_dark, 0.3);
 		}
 	}
 	input[type="submit"] {

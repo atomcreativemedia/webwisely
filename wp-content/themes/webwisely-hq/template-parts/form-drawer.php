@@ -39,7 +39,7 @@
 									<div class="col-md-6">
 										<div class="the-form">
 											<div class="form-body-profile-img">
-												
+												<i class="fa-slab fa-regular fa-face-smile"></i>
 											</div>
 											<?php if(get_field('enquiry_form','option')) {
 												$form = get_field('enquiry_form','option');

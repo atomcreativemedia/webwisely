@@ -1,8 +1,8 @@
 @mixin default_solid {
-	background-color: $grey_dark;
-	border-color: $grey_dark;
+	background-color: $ww_dark;
+	border-color: $ww_dark;
 	color: $grey_light;
-	transform: translateY(-5px);
+	transform: translateY(-4px);
 	&:hover {
 		background-color: $black;
 		border-color: $black;
@@ -20,6 +20,8 @@ p.button {
 	@include radius(8px);
 	
 	padding: 0 !important;
+	
+	transform: translateY(2px);
 	
 	a {
 		text-decoration: none;
@@ -70,18 +72,6 @@ p.button {
 					background-color: $ww_yellow_hover;
 					border-color: $ww_yellow_hover;
 				}*/
-			}
-		}
-		&.light {
-			a {
-				background-color: $grey_light;
-				border-color: $grey_light;
-				color: $blue;
-				&:hover {
-					background-color: $blue_hover;
-					border-color: $blue_hover;
-					color: $grey_light;
-				}
 			}
 		}
 	}

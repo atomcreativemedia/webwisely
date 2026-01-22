@@ -12,6 +12,10 @@
     &.scrolled {
         background-color: rgba($ww_dark,0.95);
     }
+    
+    @include media-breakpoint-up(md) {
+    	padding: 30px 0;
+    }
 	
 	@include e('logo-container') {
 		font-size: 18px;
@@ -43,18 +47,58 @@
 		}
 	}
 	
-	@include e('pricing') {
-		margin-bottom: 0;
-		
-		@include media-breakpoint-up(md) {
-			margin-top: 0;
-			margin-right: 20px;
-		}
-		
-		a {
+	@include e('mobile-nav') {
+		.menu-click {
+			font-size: 26px;
 			color: $white;
+			cursor: pointer;
+			@extend %transition;
+			i {
+				display: block;
+			}
 			&:hover {
-				color: $ww_pink;
+				color: $ww_green;
+			}
+			
+			@include media-breakpoint-up(md) {
+				font-size: 32px;
+			}
+		}
+	}
+	
+	@include e('nav') {
+		ul {
+			@extend %pmreset;
+			display: flex;
+			flex-direction: row;
+			gap: 18px;
+			li {
+				@extend %pmreset;
+				list-style: none;
+				font-size: 14px;
+				a {
+					color: $white;
+					text-decoration: none;
+					@extend %transition;
+				}
+				
+				&:hover {
+					a {
+						color: $ww_pink;
+					}
+				}
+			}
+			@include media-breakpoint-up(xl) {
+				gap: 30px;
+				li {
+					font-size: 16px;
+				}
+			}
+			@include media-breakpoint-up(xxl) {
+				gap: 40px;
+				li {
+					font-size: 18px;
+				}
 			}
 		}
 	}

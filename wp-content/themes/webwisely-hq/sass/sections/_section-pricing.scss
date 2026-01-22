@@ -31,8 +31,8 @@
 	}
 	@include e('single-feature') {
 		&::before {
-			font-family: $fontawesome_pro;
-			content: "\f336";
+			font-family: $fontawesome_slab;
+			content: "\f164";
 			margin-right: 5px;
 			color: $ww_pink;
 			position: absolute;
